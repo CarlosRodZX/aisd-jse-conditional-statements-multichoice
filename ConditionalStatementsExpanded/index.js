@@ -22,15 +22,22 @@ if (weather === 'rainy') {
   console.log("Enjoy the sunshine!"); // Expected Output: (This will not print because the 'else if' is true)
 }
 
-// Order Matters: Switching else and else if statements 
-weather = 'cloudy';
+// Corrected order of if, else if, and else blocks
 
 if (weather === 'rainy') {
-  console.log("Take an umbrella!"); // Expected output: (This will not print because the condition is false)
+  console.log("Take an umbrella!"); // This will not print because the condition is false
+
+} else if (weather === 'cloudy') { // else if must come before else
+  console.log("It might rain, take a jacket!"); // Expected Output: "It might rain, take a jacket!"
 
 } else {
-  console.log("Enjoy the Sunshine!"); // Expected Output: "Enjoy the sunshine"
+  console.log("Enjoy the Sunshine!");
+}
 
-} else if (weather === 'cloudy') {
-  console.log("It might rain, take a jacket!"); 
+// Corrected function declaration
+const age = 39;
+
+function handleGreeting() { // Added parentheses
+  const name = "Carlos";
+  console.log(`Hello, ${name}!`);
 }
